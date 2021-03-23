@@ -31,6 +31,7 @@ public enum Role
 {
     Guitar,
     Drums,
+    Keyboard,
     Bass,
     Idle,
 }
