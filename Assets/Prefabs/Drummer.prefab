@@ -154,11 +154,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2def2f81522375e4e825a93b11aec43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Track: {fileID: 8300000, guid: 0f74e64da7e0f604b967d33371cbdb3a, type: 3}
+  Track: {fileID: 8300000, guid: 7971b536df06e504588af8902a1d0c7f, type: 3}
   player: {fileID: 0}
   Wave: {fileID: 21300000, guid: 70971bd97140ab84fa8bca78a7ef3878, type: 3}
   pushed: 0
   enlargement: 0.2
+  isSilence: 0
 --- !u!114 &7459248249318341394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,9 +246,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7459248249429203836}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.1, y: 3.18, z: 1.12}
-  m_LocalScale: {x: 0.13763146, y: 0.13763146, z: 0.11469288}
+  m_LocalScale: {x: 0.19245008, y: 0.19245008, z: 0.16037506}
   m_Children:
   - {fileID: 7459248251098405914}
   m_Father: {fileID: 0}
@@ -292,8 +293,7 @@ SpriteRenderer:
   m_SortingLayerID: -42363525
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -7073300353805645804, guid: 34ffc6e8a93fddd42815c3fd2516e411,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 487e8e9e0ec386c4eab25817db3c8c38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -321,7 +321,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 14.202095, y: 13.589999}
+    oldSize: {x: 21.402597, y: 23.34}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -520,11 +520,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2def2f81522375e4e825a93b11aec43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Track: {fileID: 8300000, guid: b7558f4df49dab24b9e1daf71e976f44, type: 3}
+  Track: {fileID: 8300000, guid: d63f1e8fc62a53d4d877e6743cc97a64, type: 3}
   player: {fileID: 0}
   Wave: {fileID: 21300000, guid: f769c46ca8528f44196b923754dccad2, type: 3}
   pushed: 0
   enlargement: 0.2
+  isSilence: 0
 --- !u!114 &7459248249436773446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,11 +739,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2def2f81522375e4e825a93b11aec43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Track: {fileID: 8300000, guid: 61f26ffa2bc84f8439088f8b6e629dd5, type: 3}
+  Track: {fileID: 8300000, guid: d6961d22d05f97a41911d07e78aab53c, type: 3}
   player: {fileID: 0}
   Wave: {fileID: 21300000, guid: 0cf45ff44064be348af5db53b9776a58, type: 3}
   pushed: 0
   enlargement: 0.2
+  isSilence: 0
 --- !u!114 &7459248249801306944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,7 +845,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1039, y: -338}
+  m_AnchoredPosition: {x: -855, y: -338}
   m_SizeDelta: {x: 3, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7459248250436424519
@@ -1060,11 +1062,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2def2f81522375e4e825a93b11aec43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Track: {fileID: 8300000, guid: c597a0cce0843ea4894de4bad2a8f80c, type: 3}
+  Track: {fileID: 8300000, guid: 311eb17658813894da4cb41c3ba3f9db, type: 3}
   player: {fileID: 0}
   Wave: {fileID: 21300000, guid: 43d5c125649349a43a0e3caa95ff0601, type: 3}
   pushed: 0
   enlargement: 0.2
+  isSilence: 0
 --- !u!114 &7459248250588100834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1314,7 +1317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7459248251098405913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: -0.9, y: 1.9, z: 0}
   m_LocalScale: {x: -0.012878436, y: -0.012878436, z: -0.012878437}
   m_Children:
   - {fileID: 7459248250436424516}
@@ -1349,7 +1352,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

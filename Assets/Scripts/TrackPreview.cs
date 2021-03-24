@@ -12,6 +12,7 @@ public class TrackPreview : MonoBehaviour
     [Range(0, 2)]
     public float enlargement;
     Vector3 initialsize;
+    public bool isSilence;
 
     private void Awake()
     {
@@ -21,15 +22,13 @@ public class TrackPreview : MonoBehaviour
     public void OnMouseOver()
     {
         transform.localScale += new Vector3(2, 2, 0);
-
     }
-
     public void triggerPreview()
     {
         if (!pushed)
         {
             transform.localScale += new Vector3(enlargement, enlargement, 0);
-            player.SetTrack(Track);
+            player.SetTrack(Track);            
             player.PlayCurrentTrack();
         }
     }
@@ -48,6 +47,16 @@ public class TrackPreview : MonoBehaviour
     }
     public void addToTracks()
     {
-        player.audios.Add(Track);
+        if (isSilence)
+        {
+           AudioClip silence = AudioClip.Create("MySinusoid", 44100 * 2, 2, 44100,true);
+            player.audios.Add(silence);
+
+        }
+        else
+        {
+            player.audios.Add(Track);
+
+        }
     }
 }

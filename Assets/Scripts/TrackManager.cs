@@ -18,20 +18,24 @@ public class TrackManager : MonoBehaviour
     }
     public void tracksreproduction()
     {
-        StartCoroutine(playAudioSequentially());
+       
+            StartCoroutine(playAudioSequentially());        
     }
-    public IEnumerator playAudioSequentially()
+    public IEnumerator playAudioSequentially()  
     {
         yield return null;
         for (int i = 0; i < audios.Count; i++)
         {
             _APlayer.clip = audios[i];
             _APlayer.Play();
-            while (_APlayer.isPlaying)
+            float normalizedTime = 0;
+            while (normalizedTime <= 5.98f)
             {
+                Debug.Log(normalizedTime);
+                normalizedTime += Time.deltaTime ;
                 yield return null;
             }
-         }
+        }
     }
     public void PlayCurrentTrack()
     {
