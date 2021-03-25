@@ -159,6 +159,7 @@ MonoBehaviour:
   Wave: {fileID: 21300000, guid: 70971bd97140ab84fa8bca78a7ef3878, type: 3}
   pushed: 0
   enlargement: 0.2
+  isSilence: 0
 --- !u!114 &4525308314494100447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,6 +525,7 @@ MonoBehaviour:
   Wave: {fileID: 21300000, guid: f769c46ca8528f44196b923754dccad2, type: 3}
   pushed: 0
   enlargement: 0.2
+  isSilence: 0
 --- !u!114 &4525308314614629515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,6 +744,7 @@ MonoBehaviour:
   Wave: {fileID: 21300000, guid: 0cf45ff44064be348af5db53b9776a58, type: 3}
   pushed: 0
   enlargement: 0.2
+  isSilence: 0
 --- !u!114 &4525308314690808717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,6 +963,7 @@ MonoBehaviour:
   Wave: {fileID: 21300000, guid: 43d5c125649349a43a0e3caa95ff0601, type: 3}
   pushed: 0
   enlargement: 0.2
+  isSilence: 0
 --- !u!114 &4525308315480743983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,7 +1353,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

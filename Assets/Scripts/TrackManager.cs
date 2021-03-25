@@ -12,6 +12,7 @@ public class TrackManager : MonoBehaviour
     public float Separation;
     private AudioSource _APlayer;
 
+   
     private void Awake()
     {
         _APlayer = gameObject.GetComponent<AudioSource>();        
