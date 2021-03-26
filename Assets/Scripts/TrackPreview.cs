@@ -12,7 +12,6 @@ public class TrackPreview : MonoBehaviour
     [Range(0, 2)]
     public float enlargement;
     Vector3 initialsize;
-    public bool isSilence;
 
     private void Awake()
     {
@@ -28,7 +27,7 @@ public class TrackPreview : MonoBehaviour
         if (!pushed)
         {
             transform.localScale += new Vector3(enlargement, enlargement, 0);
-            player.SetTrack(Track);            
+            player.SetTrack(Track);
             player.PlayCurrentTrack();
         }
     }
@@ -47,16 +46,16 @@ public class TrackPreview : MonoBehaviour
     }
     public void addToTracks()
     {
-        if (isSilence)
+        player.audios.Add(Track);
+    }
+    public void removeLastTrack()
+    {
+        if (player.audios.Count > 0)
         {
-           AudioClip silence = AudioClip.Create("MySinusoid", 44100 * 2, 2, 44100,true);
-            player.audios.Add(silence);
+            var toremove =
+            player.audios.Remove(player.audios[player.audios.Count - 1]);
 
         }
-        else
-        {
-            player.audios.Add(Track);
 
-        }
     }
 }

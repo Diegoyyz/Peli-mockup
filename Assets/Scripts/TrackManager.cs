@@ -7,19 +7,17 @@ using UnityEngine;
 public class TrackManager : MonoBehaviour
 {
     public List<AudioClip> audios = new List<AudioClip>();
+    public List<GameObject> Images = new List<GameObject>();
     public GameObject Container;
     public Transform Bar;
     public float Separation;
-    private AudioSource _APlayer;
-
-   
+    private AudioSource _APlayer;   
     private void Awake()
     {
         _APlayer = gameObject.GetComponent<AudioSource>();        
     }
     public void tracksreproduction()
-    {
-       
+    {       
             StartCoroutine(playAudioSequentially());        
     }
     public IEnumerator playAudioSequentially()  
@@ -30,9 +28,8 @@ public class TrackManager : MonoBehaviour
             _APlayer.clip = audios[i];
             _APlayer.Play();
             float normalizedTime = 0;
-            while (normalizedTime <= 5.98f)
+            while (normalizedTime <= 12.01f)
             {
-                Debug.Log(normalizedTime);
                 normalizedTime += Time.deltaTime ;
                 yield return null;
             }
@@ -40,6 +37,7 @@ public class TrackManager : MonoBehaviour
     }
     public void PlayCurrentTrack()
     {
+
         _APlayer.Stop();
         _APlayer.Play();
     }
@@ -54,9 +52,17 @@ public class TrackManager : MonoBehaviour
         toSpawn.GetComponent<Image>().sprite = img;
         toSpawn.GetComponent<Image>().rectTransform.transform.localPosition = new Vector3(0 + Separation * audios.Count-1, 0, 0);
         toSpawn.GetComponent<Image>().rectTransform.localScale = new Vector3(1, 1, 1);
-
+        Images.Add(toSpawn);
     }
-    public void SetTrack(AudioClip preview) 
+    public void RemoveLastContainer()
+    {
+        if (Images.Count > 0)
+        {
+            Destroy(Images[Images.Count - 1].gameObject);
+            Images.Remove(Images[Images.Count - 1]);
+        }
+    } 
+    public void SetTrack(AudioClip preview)  
     {
         _APlayer.clip = preview;
         PlayCurrentTrack();

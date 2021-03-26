@@ -8,15 +8,14 @@ public class CameraManager : MonoBehaviour
     public GameObject[] BandMembers;
     public Animator Anim;
     public static CameraManager instance;
+    public GameObject PlayButton;
     void Awake()
     {
         Anim = gameObject.GetComponent<Animator>();
         if (instance == null)
         {
-
             instance = this;
             DontDestroyOnLoad(this.gameObject);
-
         }
         else
         {
@@ -26,10 +25,13 @@ public class CameraManager : MonoBehaviour
     public void ChangeState(String CamName)
     {
       Anim.SetTrigger(CamName);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        if (CamName== "Idle")
+        {
+            PlayButton.SetActive(true);
+        }
+        else
+        {
+            PlayButton.SetActive(false);
+        }
+    }   
 }

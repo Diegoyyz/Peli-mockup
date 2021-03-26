@@ -7,9 +7,6 @@ public class GameManager : MonoBehaviour
     public delegate BandMember SellecAction();
     public static event SellecAction OnSellection;
     public TrackManager[] Banda;
-
-
-
     public BandMember selected;
     public static GameManager instance = null;
     void Awake()
@@ -18,7 +15,6 @@ public class GameManager : MonoBehaviour
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
-
         DontDestroyOnLoad(gameObject);
 
     }
@@ -29,10 +25,6 @@ public class GameManager : MonoBehaviour
             playAllMembers();
         }
     }
-
-
-
-
     public void playAllMembers()
     {
         foreach (var item in Banda)
@@ -51,6 +43,5 @@ public class GameManager : MonoBehaviour
     public void CancelSelection()
     {
         selected = null;
-
     }
 }
